@@ -6,12 +6,12 @@ export default {
   textColor: "#262626",
   darkGreyColor: "#999",
   lightGreyColor: "#c7c7c7",
-  redColor: "ED4956",
+  redColor: "#ED4956",
   darkBlueColor: "#00376B",
-  lblueColor: "#3897f0",
+  lightBlueColor: "#0095F6",
   boxBorder: "1px solid #dbdbdb",
   borderRadius: "4px",
-  whiteBox: `${BOX_BORDER};
-             ${BOX_RADIUS};
-             background-color:white`,
+  whiteBox: `border: ${BOX_BORDER};
+             border-radius: ${BOX_RADIUS};
+             background-color: white`,
 };
