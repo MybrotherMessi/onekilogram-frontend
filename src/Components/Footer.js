@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Footer = styled.footer`
   width: 100%;
   padding: 0px 20px 0px 20px;
+  margin-top: 10px;
 `;
 
 const Div = styled.div`

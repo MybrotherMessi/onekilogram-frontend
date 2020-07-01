@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AuthContainer from "./AuthPresenter";
 import useInput from "../../Hooks/useInput";
-import { useMutation } from "react-apollo-hooks";
+import { useMutation } from "@apollo/react-hooks";
 import {
   LOG_IN,
   CREATE_ACCOUNT,
@@ -88,7 +88,7 @@ export default () => {
             data: { confirmSecret: token },
           } = await confirmSecretMutation();
           if (token !== "" && token !== undefined) {
-            localLogInMutation({ variables: { token } });
+            localLogInMutation({ variables: { token } }); //token값을 variable에 담아서 보낸다
           } else {
             throw Error();
           }

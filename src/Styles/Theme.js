@@ -2,6 +2,7 @@ const BOX_BORDER = "1px solid #dbdbdb";
 const BOX_RADIUS = "4px";
 
 export default {
+  maxWidth: "935px",
   bgColor: "#FAFAFA",
   textColor: "#262626",
   darkGreyColor: "#999",
