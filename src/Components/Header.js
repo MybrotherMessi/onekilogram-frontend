@@ -20,7 +20,7 @@ const Header = styled.header`
   justify-content: center;
   align-items: center;
   padding: 25px 0px;
-  z-index: 99;
+  z-index: 2;
 `;
 
 const HeaderWrapper = styled.div`
@@ -63,7 +63,7 @@ const HeaderLink = styled(Link)`
   }
 `;
 
-const MYPROFILE = gql`
+export const MY_PROFILE = gql`
   {
     myProfile {
       userName
@@ -73,12 +73,13 @@ const MYPROFILE = gql`
 
 export default withRouter(({ history }) => {
   const search = useInput("");
-  const { data, loading } = useQuery(MYPROFILE);
+  const { data, loading } = useQuery(MY_PROFILE);
   if (loading) return "";
   const onSearchSubmit = (e) => {
     e.preventDefault();
     history.push(`/search?term=${search.value}`);
   };
+
   return (
     <Header>
       <HeaderWrapper>
@@ -104,7 +105,7 @@ export default withRouter(({ history }) => {
             <HeartEmpty />
           </HeaderLink>
           {!data.myProfile ? (
-            <HeaderLink to="/#">
+            <HeaderLink to="/">
               <User />
             </HeaderLink>
           ) : (
