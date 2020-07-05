@@ -63,7 +63,7 @@ const HeaderLink = styled(Link)`
   }
 `;
 
-export const MY_PROFILE = gql`
+const MY_PROFILE = gql`
   {
     myProfile {
       userName
